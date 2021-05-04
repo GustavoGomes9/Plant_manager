@@ -4,10 +4,8 @@ import {
   useFonts,
   Jost_400Regular,
   Jost_600SemiBold 
-} from '@expo-google-fonts/jost'
-import { Welcome } from './src/pages/Welcome';
-import { Useridentification } from './src/pages/UserIdentification';
-import { Confirmation } from './src/pages/Confirmation';
+} from '@expo-google-fonts/jost';
+import Routes from './src/routes';
 
 export default function App(){
 const [isFontloaded] = useFonts({
@@ -18,6 +16,6 @@ const [isFontloaded] = useFonts({
     return <AppLoading />
  
   return(
-    <Confirmation/>
+    <Routes/>
   )
 }

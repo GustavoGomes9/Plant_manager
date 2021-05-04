@@ -5,8 +5,14 @@ import colors from '../styles/colors';
 import wateringImg from '../assets/watering.png'
 import {Feather} from '@expo/vector-icons'
 import fonts from '../styles/fonts';
+import { useNavigation } from '@react-navigation/core';
 
 export function Welcome(){
+const navigation = useNavigation();
+
+function handleSubmit(){
+    navigation.navigate('User')
+}
     return(
         <SafeAreaView style={style.container}>
             <View style={style.wrapper}>
@@ -30,6 +36,7 @@ export function Welcome(){
                 <TouchableOpacity 
                 style={style.button} 
                 activeOpacity={0.6}
+                onPress={handleSubmit}
                 >
                     <Text>
                         <Feather name="chevron-right" style={style.buttonText} ></Feather>
